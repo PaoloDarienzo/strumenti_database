@@ -1,7 +1,7 @@
-CREATE TABLE Strumento(
+﻿CREATE TABLE Strumento(
 id int PRIMARY KEY,
 dataInserimento DATE NOT NULL DEFAULT '2017-01-01',
-IPInserimento VARCHAR(15) NOT NULL DEFAULT '0.0.0.0',
+IPInserimento VARCHAR(45) NOT NULL DEFAULT '0.0.0.0',
 nome VARCHAR(150) NOT NULL,
 nPezziDisponibili int NOT NULL DEFAULT 0
 	CHECK (nPezziDisponibili >= 0),
@@ -16,5 +16,10 @@ classificazione VARCHAR(15) NOT NULL
 marca VARCHAR(50) NOT NULL
 	REFERENCES Marca(nome)
 	ON UPDATE CASCADE ON DELETE NO ACTION,
-productType int NOT NULL DEFAULT 0
+productType CHAR(1) NOT NULL DEFAULT 0,
+usato BOOL DEFAULT false,
+sconto int NOT NULL DEFAULT 0 
+	CHECK (sconto >= 0 AND sconto <= 100),
+nPezziMinimi int NOT NULL DEFAULT 0,
+livelloConsigliato livello
 );
