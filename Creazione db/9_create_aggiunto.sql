@@ -1,5 +1,5 @@
 ﻿CREATE TABLE Aggiunto(
-strumento int
+strumento UUID
 	REFERENCES Strumento(id)
 	ON UPDATE CASCADE ON DELETE CASCADE,
 cliente VARCHAR(50)

@@ -1,7 +1,5 @@
 ﻿CREATE TABLE Ordine(
-id int,
-idstrumento int,
-npezzi int NOT NULL DEFAULT 0,
+id UUID PRIMARY KEY,
 ora TIME NOT NULL DEFAULT '00:00:00',
 data DATE NOT NULL DEFAULT '2017-01-01',
 IPAcquirente VARCHAR(45) NOT NULL DEFAULT '0.0.0.0',
@@ -13,6 +11,5 @@ via VARCHAR(50),
 civico VARCHAR(7),
 CAP CHAR(5),
 nomeMetodo VARCHAR(25),
-credenziali VARCHAR(15),
-PRIMARY KEY (id, idstrumento)
+credenziali VARCHAR(15)
 );
