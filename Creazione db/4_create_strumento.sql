@@ -7,7 +7,7 @@ nPezziDisponibili int NOT NULL DEFAULT 0
 	CHECK (nPezziDisponibili >= 0),
 descrizione VARCHAR(2000),
 peso DECIMAL (7, 3) NOT NULL DEFAULT 0 
-	CHECK (peso >= 0 ),
+	CHECK (peso >= 0),
 prezzo DECIMAL (8, 2) NOT NULL DEFAULT 0
 	CHECK (prezzo >= 0),
 classificazione VARCHAR(15) NOT NULL
