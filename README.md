@@ -1,2 +1,2 @@
 # strumenti_database
-Database scritto in PostgreSQL del progetto del negozio online di strumenti musicali, Univr, 2017.
+PostgreSQL database of the online musical instruments shop project, Univr, 2017.
